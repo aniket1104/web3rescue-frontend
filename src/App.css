@@ -1,38 +1,110 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* font-family: 'Montserrat', sans-serif; */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@font-face {
+    font-family: "PatsySans";   /*Can be any text*/
+    src: local("PatsySans"),
+      url("./assets/fonts/PatsySans.otf") format("truetype");
   }
+
+/* .getStartedButton {
+    
+
+    border-radius: 100rem;
+  padding: 1rem;
+  font-family: 'Avenir Next';
+  font-size: 1rem;
+  padding: .5rem 3rem;
+  color: black;
+  box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
+  border: solid 3px transparent;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #78e4ff, #ff48fa);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 2px 1000px 1px #fff inset;
+
+} */
+
+/* .privateContainer {
+  border-width: 1px ;
+  border-style: solid;
+  border-image: linear-gradient(90deg, #BE14EC, #EF14A9);
+} */
+
+
+
+.gradient-border {
+  position: relative;
+  /* padding: 15px 20px; */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50px; 
+  border: 2px solid transparent;
+  background:linear-gradient(0deg, #BE14EC, #EF14A9) border-box;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) padding-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
 }
 
-.App-link {
-  color: #61dafb;
+.custom-search {
+  position: relative;
+  width: 900px;
+  left: 90px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.custom-search-input {
+  width: 100%;
+  border: 1px solid #FFF;
+  border-radius: 100px;
+  padding: 10px 10px 10px 30px; 
+  line-height: 1;
+  box-sizing: border-box;
+  color: #FFF;
+  background: #150633;
+  height: 75px;
+  font-size: 17px;
+  font-family: 'Montserrat';
+}
+
+.custom-search-botton {
+  position: absolute;
+  left: -185px;
+  z-index: 2;
+}
+
+.gradient-border2 {
+  position: relative;
+  /* padding: 15px 20px; */
+}
+
+.gradient-border2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px; 
+  border: 1px solid transparent;
+  background:linear-gradient(0deg, #BE14EC, #EF14A9) border-box;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) padding-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}
+
+
+.root {
+  width: 80vw;
 }
